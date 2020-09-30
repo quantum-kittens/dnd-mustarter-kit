@@ -4,14 +4,14 @@ from qiskit.aqua.components.optimizers import SPSA
 from qiskit.circuit import ParameterVector
 
 # Ratings
-d = 1
-c = 2
-b = 3
-a = 4
-ap = 5
-s = 6
-sp = 7
-op = 8
+d = 1.1
+c = 1.2
+b = 1.3
+a = 1.4
+ap = 1.5
+s = 1.6
+sp = 1.7
+op = 1.8
 
 # Synergy matrix
 SYNERGY_MATRIX = np.array(
