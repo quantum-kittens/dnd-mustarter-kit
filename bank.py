@@ -1,4 +1,4 @@
-adjectives = {
+ADJECTIVES = {
     # Personality adjectives
     "pos_adj": [
         "Gregarious",
@@ -33,7 +33,7 @@ adjectives = {
     "color": ["blue", "mauve", "olive", "burgundy"],
 }
 
-stories_db = [
+STORIES_DB = [
     "You ate a cursed USER_FRUIT and now you can't see the color QC_COLOR.",
     "A QC_NEG_ADJ picksie stole your USER_COLOR USER_NOUN, and now you search high and low to recover it.",
 ]

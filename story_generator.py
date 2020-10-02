@@ -1,6 +1,6 @@
 import re
 
-from bank import adjectives
+from bank import ADJECTIVES
 from qrandom import QuantumRandomInt
 
 
@@ -23,9 +23,9 @@ class StoryGenerator:
 
         for qc_category in qc.findall(story):
             category = qc_category.partition("_")[2].lower()
-            word_chooser = QuantumRandomInt(0, len(adjectives[category]) - 1)
+            word_chooser = QuantumRandomInt(0, len(ADJECTIVES[category]) - 1)
             idx = word_chooser.generate(1, backend)[0]
-            word = adjectives[category][idx]
+            word = ADJECTIVES[category][idx]
             story = story.replace(qc_category, word, 1)
 
         return story
