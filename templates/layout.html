@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D&amp;D μStarter Kit</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous"/>
+
+    <!-- Skeleton alerts from https://github.com/nathancahill/skeleton-alerts -->
+    <style>
+      .alert {
+          display: block;
+          padding: 20px;
+          border-left: 5px solid;
+      }
+
+      .alert-success {
+          background-color: #D5F5E3;
+          border-left-color: #2ECC71;
+          color: #2ECC71;
+      }
+
+      .alert-info {
+          background-color: #D6EAF8;
+          border-left-color: #3498DB;
+          color: #3498DB;
+      }
+
+      .alert-warning {
+          background-color: #FCF3CF;
+          border-left-color: #F1C40F;
+          color: #F1C40F;
+      }
+
+      .alert-error {
+          background-color: #F2D7D5;
+          border-left-color: #C0392B;
+          color: #C0392B;
+      }
+    </style>
+
+  </head>
+  <body>
+    {% block body %}
+    {% endblock %}
+
+    <div class="container">
+      <div class="row">
+        <div class="one-third column">
+          <a class="button" href="/dice">Dice Roller</a>
+        </div>
+        <div class="one-third column">
+          <a class="button" href="/character">Character Generator</a>
+        </div>
+        <div class="one-third column">
+          <a class="button" href="/scene">Scene Generator</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

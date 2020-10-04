@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+  <h2>Scene Generator</h2>
+</div>
+
+{% if answered %}
+
+<div class="container">
+  <div class="row">
+    <div class="u-full-width">
+      {{ scene }}
+    </div>
+  </div>
+</div>
+
+{% else %}
+
+<!-- Form -->
+<div class="container">
+  <form action="{{ url_for('scene') }}" method="post">
+
+    {% for category in categories %}
+    <div class="row">
+      <div class="six columns">
+        <label for="{{ category }}">Enter {{ category }}</label>
+        <input class="u-full-width" type="text" name="{{ category }}">
+      </div>
+    </div>
+    {% endfor %}
+    <input class="button-primary" type="submit" value="Submit" id="roll_btn" />
+
+</div>
+
+{% endif %}
+
+{% endblock %}

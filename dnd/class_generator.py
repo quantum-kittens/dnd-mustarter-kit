@@ -1,5 +1,5 @@
 import numpy as np
-from qiskit import Aer, QuantumCircuit, execute
+from qiskit import BasicAer, QuantumCircuit, execute
 from qiskit.aqua.components.optimizers import SPSA
 from qiskit.circuit import ParameterVector
 
@@ -70,7 +70,7 @@ CLASSES = [
     "Ranger (Str)",
     "Rogue",
     "Rogue (Arcane Trickster)",
-    "Sorceror",
+    "Sorcerer",
     "Warlock",
     "Wizard",
 ]
@@ -83,7 +83,7 @@ class ClassGenerator:
 
         self.backend = backend
         if not self.backend:
-            self.backend = Aer.get_backend("qasm_simulator")
+            self.backend = BasicAer.get_backend("qasm_simulator")
         self.shots = shots
 
         class_ratings = SYNERGY_MATRIX[RACES.index(race), :]
@@ -112,11 +112,11 @@ class ClassGenerator:
         cost = np.sum(np.square(probabilities - self.expected_probabilities))
         return cost
 
-    def generate(self):
+    def generate(self, maxiter=500):
         rng = np.random.default_rng()
         thetas = rng.uniform(0, 2 * np.pi, self.num_qubits)
 
-        spsa = SPSA()
+        spsa = SPSA(maxiter=maxiter)
         minima, _, _ = spsa.optimize(
             self.num_qubits, self._objective_fn, initial_point=thetas
         )

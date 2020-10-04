@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+  <h2>Character Generator</h2>
+</div>
+
+{% if answered %}
+
+<div class="container">
+  <div class="row">
+    <div class="one column">
+      <label for="name">Name</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <h4> {{ name }} </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="one column">
+      <label for="race">Race</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <h4> {{ race }} </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="one column">
+      <label for="name">Class</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <h4> {{ dnd_class }} </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="one column">
+      <label for="name">Backstory</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="sixteen columns">
+      <h4> {{ backstory }} </h4>
+    </div>
+  </div>
+
+  <!-- <a class="button-primary" href="{{ url_for('character') }}">REFRESH</a> -->
+  
+</div>
+
+
+
+{% else %}
+
+<!-- Form -->
+<div class="container">
+  <form action="{{ url_for('character') }}" method="post">
+
+    {% for category in categories %}
+    <div class="row">
+      <div class="six columns">
+        {% if category == "adjective" %}
+        <label for="{{ category }}">Enter an {{ category }}</label>
+        {% else %}
+        <label for="{{ category }}">Enter a {{ category }}</label>
+        {% endif %}
+        <input class="u-full-width" type="text" name="{{ category }}">
+      </div>
+    </div>
+    {% endfor %}
+    <input class="button-primary" type="submit" value="Submit" id="roll_btn" />
+
+</div>
+
+{% endif %}
+
+{% endblock %}

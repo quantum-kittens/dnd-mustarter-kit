@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+  <h2>Dice Roller</h2>
+</div>
+
+<!-- Form -->
+<div class="container">
+  <form action="{{ url_for('dice') }}" method="post">
+
+    <div class="row">
+      <div class="two columns">
+        <label for="D4">
+          <input type="radio" name="dice" id="D4" value="D4">
+          <span>D4</span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D6">
+          <input type="radio" name="dice" id="D6" value="D6">
+          <span>D6</span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D8">
+          <input type="radio" name="dice" id="D8" value="D8">
+          <span>D8</span>
+        </label>
+      </div>
+      
+      <div class="two columns">
+        <label for="D10">
+          <input type="radio" name="dice" id="D10" value="D10">
+          <span>D10</span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D12">
+          <input type="radio" name="dice" id="D12" value="D12">
+          <span>D12</span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D20">
+          <input type="radio" name="dice" id="D20" value="D20" checked="checked">
+          <span>D20</span>
+        </label>
+      </div>
+    </div>
+
+    <div container="row">
+      <div class="six columns">
+        <label for="Number of Dice">Number of Dice</label>
+        <input type="number" value=1 class="u-full-width" name="times"/>
+      </div>
+      <div class="six columns">
+        <label for="Modifier">Modifier</label>
+        <input type="number" value=0 class="u-full-width" name="modifier"/>
+      </div>
+    </div>
+    <input class="button-primary" type="submit" value="Roll" id="roll_btn" />
+    <br/>
+    <div class="alert alert-info"><strong>{{ roll }}</strong></div>
+  </form>
+</div>
+{% endblock %}

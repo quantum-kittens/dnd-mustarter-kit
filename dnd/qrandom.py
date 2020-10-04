@@ -24,7 +24,7 @@ class QuantumRandomInt:
         result = job.result().get_memory()
         return result
 
-    def generate(self, size, backend=None):
+    def generate(self, size=1, backend=None):
         out = []
         while len(out) < size:
             if not self.randints:
@@ -41,7 +41,7 @@ class QuantumDice(QuantumRandomInt):
     def __init__(self, high):
         super().__init__(1, high)
 
-    def roll(self, times, modifier, backend=None):
+    def roll(self, times=1, modifier=0, backend=None):
         rolls = self.generate(times, backend)
         total = sum(rolls) + modifier
         return rolls, total
