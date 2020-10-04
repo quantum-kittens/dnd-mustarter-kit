@@ -148,3 +148,8 @@ def scene():
             scene = scene.replace(qc_category, word, 1)
 
         return render_template("scene_generator.html", scene=scene, answered=True)
+
+
+if __name__ == "__main__":
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
