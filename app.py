@@ -55,7 +55,7 @@ def character():
 
         # get class
         cg = ClassGenerator(race)
-        dnd_class = cg.generate(maxiter=300)[0]
+        dnd_class = cg.generate(maxiter=100)[0]
 
         return render_template(
             "character_generator.html",
