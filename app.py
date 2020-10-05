@@ -1,5 +1,5 @@
 import re
-from collections import deque
+from collections import defaultdict, deque
 
 from flask import Flask, Markup, render_template, request
 
@@ -152,11 +152,6 @@ def scene():
                 user_categories.append(user_category)
         user_replies = deque([request.form.get(category) for category in categories])
 
-        print(categories)
-        print(user_categories)
-
-        print(len(user_categories) == len(user_replies))
-
         for user_category in user_categories:
             reply = user_replies.popleft()
             category = user_category.partition("_")[2].lower()
@@ -169,10 +164,15 @@ def scene():
             scene = scene.replace(user_category, word)
 
         qc = re.compile("QC_\w+")
+        category_idx = defaultdict(int)
         for qc_category in qc.findall(scene):
             category = qc_category.partition("_")[2].lower()
             word_chooser = QuantumRandomInt(0, len(WORD_BANK[category]) - 1)
             idx = word_chooser.generate()[0]
+            if len(WORD_BANK[category]) > 1:
+                while idx == category_idx[category]:
+                    idx = word_chooser.generate()[0]
+            category_idx[category] = idx
             word = WORD_BANK[category][idx].lower()
             word = '<span style="color: #1e90ff">' + word + "</span>"
             scene = scene.replace(qc_category, word, 1)
