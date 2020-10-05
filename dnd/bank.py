@@ -234,7 +234,7 @@ WORD_BANK = {
 
 STORIES_DB = [
     "You ate a cursed USER_FRUIT and now you can't see the color QC_COLORS.",
-    "A QC_NEG_ADJ picksie stole your USER_COLOR USER_OBJECT, and now you search high and low to recover it.",
+    "A QC_NEG_ADJ pixie stole your USER_COLOR USER_OBJECT, and now you search high and low to recover it.",
     "When you were an infant, a QC_RACES wizard bestowed upon you an amulet with the symbol of a QC_NEG_ADJ USER_ANIMAL.",
     "You had a weird dream about a QC_COLORS USER_ANIMAL drinking USER_BEVERAGE, which you took as a sign to go on adventures.",
     "Your childhood was torn apart by a USER_ADJECTIVE QC_CONFLICTS.",
@@ -306,7 +306,7 @@ You frown, look from the barkeep to the USER_OBJECT in your hand. And with a hin
 
 After all, you’ve seen stranger things.
 
-You’ve met a picksie who snuck into your room to distract you with a song about a QC_NOUNS while her companion stole your QC_OBJECTS.
+You’ve met a pixie who snuck into your room to distract you with a song about a QC_NOUNS while her companion stole your QC_OBJECTS.
 
 You’ve faced a one-eyed giant who guarded a trove of USER_PLURAL_OBJECT in an enchanted QC_PLACES.
 
