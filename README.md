@@ -1,7 +1,7 @@
 # The D&D μStarter Kit 
 powered by quantum computing and ad-libs
   
-![](https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd_cover-scaled.jpg)
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd_cover-scaled.jpg" width="80%"  />
 
 ## Overview
 This is a helper tool for players of Dungeons and Dragons. Roll dice, generate a character with an ad-libbed one-line backstory, or play a complete ad-libbed D&D scene! The D&D μStarter Kit makes use of quantum computing for randomness and ad-libs, alongside user inputs. This generator is based on the D&D 5E Player’s Handbook.
@@ -13,14 +13,22 @@ This is a helper tool for players of Dungeons and Dragons. Roll dice, generate a
 
 ##  How to Use The D&D μStarter Kit 
 
+**Access the D&D μStarter Kit online by clicking here.**
+
+
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/home.png" width="70%"  />
+
 Click on ‘Dice Roller’ to use the dice. You will be taken to a screen that allows you to select the type of dice, number of dice, and modifier. Click ‘Roll’ to get your result.
 
-
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dice_roller.png" width="80%"  />
 
 Click on ‘Character Generator’ to generate a character. An ad-lib prompt will appear. Enter a word according to the prompt and then click ‘Submit’. You will be provided with a name, race, class, and one-line back story.  User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.
 
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/char_gen.png" width="80%"  />
 
 Click on ‘D&D Scene’ to play an ad-libbed scene. You will be provided with a number of ad-libbed prompts. Enter words according to the prompts and then click ‘Submit’. Your customized scene will appear! User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.
+
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd_scene.png" width="80%"  />
 
 ##  How The D&D μStarter Kit Works
 ### Quantum Computing
@@ -38,8 +46,7 @@ A race is randomly selected through quantum computing. The race options per the 
 ### Class Selection
 Once a race is selected, a class is randomly selected. However, all classes are not given equal probabilities of being selected, as certain races are more synergetic with certain classes.
 
-
-![](https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/synergy-table.png)
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/synergy-table.png" width="80%"  />
 
 We make use of this synergy table by Taron Pounds as a basis for a simple probability mapping that applies rotations in the quantum circuit such that the probability of a class that is more synergetic with a race is larger than that of a class that is less synergetic with a certain race.
 
@@ -84,13 +91,13 @@ for insightful comments, remarks and advice.
 
 #### D&D Resource Links:
 
-D&D Beyond 
-D&D Wiki 
-Synergy Table by Taron Pounds
+- [D&D Beyond](https://www.dndbeyond.com) 
+- [D&D Wiki](https://www.dandwiki.com/)
+- [Synergy Table by Taron Pounds](https://www.reddit.com/r/DnD/comments/8788on/5e_race_class_synergy_analysis_v5/)
 
 #### Other Resources: 
-[The Quantum Catalog](http://quantumcatalog.com/)
-[Qiskit](https://qiskit.org/)
+- [The Quantum Catalog](http://quantumcatalog.com/)
+- [Qiskit](https://qiskit.org/)
 
 
 Cover photo by [Clint Bustrillos on Unsplash](https://unsplash.com/@clintbustrillos).
