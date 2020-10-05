@@ -254,7 +254,7 @@ STORIES_DB = [
 ]
 
 
-SCENE = """ The USER_ANIMAL and USER_NOUN is an old tavern, QC_APP_NEG_ADJ and QC_APP_NEG_ADJ and USER_ADJ3, but welcoming nonetheless.
+SCENE = """The USER_ANIMAL and USER_NOUN is an old tavern, QC_APP_NEG_ADJ and QC_APP_NEG_ADJ and USER_ADJ3, but welcoming nonetheless.
 
 You and your QC_POS_ADJ stallion, USER_NAME, have slept under too many night skies to be very picky anyway.
 

@@ -1,7 +1,7 @@
 import re
 from collections import deque
 
-from flask import Flask, render_template, request
+from flask import Flask, Markup, render_template, request
 
 from dnd import *
 
@@ -82,7 +82,7 @@ def character():
             name=name,
             race=race,
             dnd_class=dnd_class,
-            backstory=story,
+            backstory=Markup(story),
             answered=True,
         )
 
@@ -121,7 +121,8 @@ def dice():
 
 @app.route("/scene", methods=["GET", "POST"])
 def scene():
-    scene = SCENE
+    lines = SCENE.split("\n")
+    scene = " ".join(["<p>" + line + "</p>" for line in lines])
     categories = [
         "an animal",
         "a singular noun",
@@ -145,7 +146,10 @@ def scene():
         )
     else:
         user = re.compile("USER_\w+")
-        user_categories = set(user.findall(scene))
+        user_categories = []
+        for user_category in user.findall(scene):
+            if user_category not in user_categories:
+                user_categories.append(user_category)
         user_replies = deque([request.form.get(category) for category in categories])
 
         print(len(user_categories) == len(user_replies))
@@ -157,6 +161,7 @@ def scene():
                 word = reply.capitalize()
             else:
                 word = reply.lower()
+            word = '<span style="color: #ff8c00">' + word + "</span>"
             scene = scene.replace(user_category, word)
 
         qc = re.compile("QC_\w+")
@@ -165,9 +170,12 @@ def scene():
             word_chooser = QuantumRandomInt(0, len(WORD_BANK[category]) - 1)
             idx = word_chooser.generate()[0]
             word = WORD_BANK[category][idx].lower()
+            word = '<span style="color: #1e90ff">' + word + "</span>"
             scene = scene.replace(qc_category, word, 1)
 
-        return render_template("scene_generator.html", scene=scene, answered=True)
+        return render_template(
+            "scene_generator.html", scene=Markup(scene), answered=True
+        )
 
 
 if __name__ == "__main__":

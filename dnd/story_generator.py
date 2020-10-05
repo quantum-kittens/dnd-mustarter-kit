@@ -40,6 +40,7 @@ class StoryGenerator:
                 word = reply.capitalize()
             else:
                 word = reply.lower()
+            word = '<span style="color: #ff8c00">' + word + "</span>"
             self.story = self.story.replace(user_category, word, 1)
 
         qc = re.compile("QC_\w+")
@@ -48,6 +49,7 @@ class StoryGenerator:
             word_chooser = QuantumRandomInt(0, len(WORD_BANK[category]) - 1)
             idx = word_chooser.generate(**kwargs)[0]
             word = WORD_BANK[category][idx].lower()
+            word = '<span style="color: #1e90ff">' + word + "</span>"
             self.story = self.story.replace(qc_category, word, 1)
 
         return self.story
