@@ -270,7 +270,7 @@ You make your way to the bar at the back, where the barkeep, a USER_ADJ5 QC_RACE
 
 The barkeep raises an eyebrow before shrugging and calling out to the waitress who greeted you.
 
-“Fetch that fresh bit o’ USER_DRINK from the back would ye, lass? And tell cook to get on some USER_FOOD.” The barkeep turns to you, still polishing the same glass. “The name’s USER_ANOTHER_NAME. I would no object to hearing yours, but some like to keep low, ye ken. What’ll it be?”
+“Fetch that fresh bit o’ USER_DRINK from the back would ye, lass? And tell cook to get on some USER_FOOD.” The barkeep turns to you, still polishing the same glass. “The name’s USER_ANOTHER_NAME. I would no object to hearing yours, but some like to keep low. What’ll it be?”
 
 You simply smile. Your recent campaign gave you a bit of a reputation and you’d like to enjoy your USER_DRINK in peace.
 
