@@ -8,17 +8,12 @@
 
 {% block navigation %}
 
-<div class="navbar-spacer"></div>
-<nav class="navbar">
-  <div class="container">
-    <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="/dice">Dice Roller</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="/character">Character Generator</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="/scene">D&amp;D Scene</a></li>
-    </ul>
-  </div>
-</nav>
+<ul id="navbar">
+  <li><a href="/">Home</a></li>
+  <li><a href="/dice">Dice Roller</a></li>
+  <li><a href="/character">Character Generator</a></li>
+  <li><a href="/scene">D&amp;D Scene</a></li>
+</ul>
 
 {% endblock %}
 
@@ -31,11 +26,11 @@
 
 {% if answered %}
 </p>
-<h6 style="text-align: center"><p>User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.</p></h6>
+<h6 class="centering"><p>User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.</p></h6>
 <hr>
 <div class="container">
   <div class="row">
-    <h4 style="text-align: center">Stranger Things</h4>
+    <h4 class="centering">Stranger Things</h4>
   </div>
 </div>
 <div class="container">
@@ -50,7 +45,7 @@
 </p>
 <div class="container">
   <div class="row">
-    <h4 style="text-align: center">D&amp;D Scene</h4>
+    <h4 class="centering">D&amp;D Scene</h4>
   </div>
 </div>
 <!-- Form -->
@@ -84,6 +79,6 @@
 
 {% block footer %}
 <hr>
-<h6 style="text-align: center;"><a href="https://www.deviantart.com/exitmothership/art/Dizzy-Hearts-Tavern-734479865">Artist: exitmothership on DeviantArt</a></h6>
+<h6 class="centering"><a href="https://www.deviantart.com/exitmothership/art/Dizzy-Hearts-Tavern-734479865">Artist: exitmothership on DeviantArt</a></h6>
 
 {% endblock %}

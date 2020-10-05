@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
     <title>D&amp;D μStarter Kit</title>
 
@@ -7,115 +8,74 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
 
-    <!-- <link rel="stylesheet" href="http://getskeleton.com/css/custom.css" /> -->
     
-    <!-- Skeleton alerts from https://github.com/nathancahill/skeleton-alerts -->
+    
+    <!-- Skeleton alerts adapted from https://github.com/nathancahill/skeleton-alerts -->
     <style>
-      .navbar {
-          display: flex;
+      ul#navbar {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          justify-content: between;
+          text-align: center;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+      }
+      
+      ul#navbar>li {
+          display: inline;
       }
 
-      @media (min-width: 750px) {
-          /* Navbar */
-          .navbar + .docs-section {
-              border-top-width: 0;
-          }
-
-          .navbar,
-          .navbar-spacer {
-              padding-left: 14em;
-              display: block;
-              width: 100%;
-              height: 6.5rem;
-              background: #fff;
-              z-index: 99;
-              border-top: 1px solid #eee;
-              border-bottom: 1px solid #eee;
-          }
-
-          .navbar-spacer {
-              display: none;
-          }
-
-          .navbar > .container {
-              width: 100%;
-          }
-
-          .navbar-list {
-              list-style: none;
-              margin-bottom: 0;
-          }
-
-          .navbar-item {
-              position: relative;
-              float: left;
-              margin-bottom: 0;
-          }
-
-          .navbar-link {
-              text-align: center;
-              text-transform: uppercase;
-              font-size: 11px;
-              font-weight: 600;
-              letter-spacing: .2rem;
-              margin-right: 35px;
-              text-decoration: none;
-              line-height: 6.5rem;
-              color: #222;
-          }
-
-          .navbar-link.active {
-              color: #33C3F0;
-          }
-
-          .has-docked-nav .navbar {
-              position: fixed;
-              top: 0;
-              left: 0;
-          }
-
-          .has-docked-nav .navbar-spacer {
-              display: block;
-          }
-
-          /* Re-overiding the width 100% declaration to match size of % based container */
-          .has-docked-nav .navbar > .container {
-              width: 80%;
-          }
+      ul#navbar>li>a {
+          display: inline-block;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .2rem;
+          margin-right: 35px;
+          text-decoration: none;
+          line-height: 6.5rem;
+          color: #222;
       }
-  
+      
       .alert {
           display: block;
           padding: 20px;
-          border-left: 5px solid;
+          /* border-left: 5px solid; */
       }
 
       .alert-success {
           background-color: #D5F5E3;
-          border-left-color: #2ECC71;
+          /* border-left-color: #2ECC71; */
           color: #2ECC71;
       }
 
       .alert-info {
           background-color: #D6EAF8;
-          border-left-color: #3498DB;
+          /* border-left-color: #3498DB; */
           color: #3498DB;
       }
 
       .alert-warning {
           background-color: #FCF3CF;
-          border-left-color: #F1C40F;
+          /* border-left-color: #F1C40F; */
           color: #F1C40F;
       }
 
       .alert-error {
           background-color: #F2D7D5;
-          border-left-color: #C0392B;
+          /* border-left-color: #C0392B; */
           color: #C0392B;
       }
 
       .centering {
           text-align: center;
+      }
+
+      .left {
+          text-align: left;
       }
     </style>
 

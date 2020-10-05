@@ -9,17 +9,12 @@
 
 {% block navigation %}
 
-<div class="navbar-spacer"></div>
-<nav class="navbar">
-  <div class="container">
-    <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="/dice">Dice Roller</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="/character">Character Generator</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="/scene">D&amp;D Scene</a></li>
-    </ul>
-  </div>
-</nav>
+<ul id="navbar">
+  <li><a href="/">Home</a></li>
+  <li><a href="/dice">Dice Roller</a></li>
+  <li><a href="/character">Character Generator</a></li>
+  <li><a href="/scene">D&amp;D Scene</a></li>
+</ul>
 
 {% endblock %}
 
@@ -27,7 +22,7 @@
 </p>
 <div class="container">
   <div class="row">
-    <h4 style="text-align: left">Welcome, adventurers!</h4>
+    <h4 class="left">Welcome, adventurers!</h4>
   </div>
 </div>
 {% endblock %}    
@@ -54,7 +49,7 @@
 {% block footer %}
 <hr>
 
-<h6 style="text-align: center;"><a href="https://www.deviantart.com/themefinland/art/The-winding-path-commission-800945478">Artist: themefinland on DeviantArt</a></h6> 
+<h6 class="centering"><a href="https://www.deviantart.com/themefinland/art/The-winding-path-commission-800945478">Artist: themefinland on DeviantArt</a></h6> 
 <!-- img1 <h6 style="text-align: center;"><a href="https://www.deviantart.com/cyberaeon/art/Party-of-seven-678394450">Artist: cyberaeon on DeviantArt</a></h6> -->
 
 

@@ -7,17 +7,17 @@
 
 {% block navigation %}
 
-<div class="navbar-spacer"></div>
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/dice">Dice Roller</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/character">Character Generator</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/scene">D&amp;D Scene</a></li>
-        </ul>
-      </div>
-    </nav>
+<!-- <div class="navbar-spacer"></div> -->
+<!-- <nav class="navbar"> -->
+  <!-- <div class="container"> -->
+    <ul id="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/dice">Dice Roller</a></li>
+      <li><a href="/character">Character Generator</a></li>
+      <li><a href="/scene">D&amp;D Scene</a></li>
+    </ul>
+  <!-- </div> -->
+<!-- </nav> -->
 
 {% endblock %}
 
@@ -25,7 +25,7 @@
 </p>
 <div class="container">
   <div class="row">
-    <h4 style="text-align: center">Dice Roller</h4>
+    <h4 class="centering">Dice Roller</h4>
   </div>
 </div>
 
@@ -102,8 +102,8 @@
       </div>
     </div>
     <br/>
-    <div class="row centering">
-      <p class="alert alert-info"><strong>{{ roll }}</strong></p>
+    <div class="row centering alert alert-info">
+      <strong>{{ roll }}</strong>
     </div>
   </form>
 </div>
@@ -111,6 +111,6 @@
 
 {% block footer %}
 <hr>
-<h6 style="text-align: center;"><a href="https://unsplash.com/@clintbustrillos">Photographer: clintbustrillos on Unsplash</a></h6>
+<h6 class="centering"><a href="https://unsplash.com/@clintbustrillos">Photographer: clintbustrillos on Unsplash</a></h6>
 
 {% endblock %}
