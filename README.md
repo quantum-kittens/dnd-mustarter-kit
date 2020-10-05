@@ -13,8 +13,21 @@ This is a helper tool for players of Dungeons and Dragons. Roll dice, generate a
 
 ##  How to Use The D&D μStarter Kit
 
-**Access the D&D μStarter Kit online by clicking here.**
+An online version is provided at [qdnd](https://qdnd.herokuapps.com). This version runs only on the QASM simulator so that the server is not overloaded. 
 
+### How to Run The D&D μStarter Kit Locally
+
+If you want to run it on a actual quantum device, or just have a local copy of this follow the following step:
+
+1. Clone the git repository from [Github](https://github.com/quantum-kittens/dnd-mustarter-kit).
+2. `cd` into the git repository.
+3. Execute `pip install -r requirements.txt`.
+4. Execute `export FLASK_APP = app.py`
+5. Execute `flask run`
+
+The app will available at `127.0.0.1:5000/`. You can direct your browser to that location to access it. To run this on an actual quantum device, open `app.py` and edit it as mentioned in the comments in the file, before executing `flask run`.
+
+### Navigating The D&D μStarter Kit
 
 <img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/home.png" width="80%"  />
 
@@ -77,18 +90,6 @@ If you want to roll a d100, we recommend you roll two d10’s, one for the tens 
 ### Ad-libs
 
 The ad-libbed aspect of the backstories and the D&D scene is a joint effort by the user and the quantum computer. The improvised words are generated both by user inputs as well as randomly selected by a quantum computer from word banks. User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.
-
-### Using it
-
-A online version of this is provided at [qdnd](https://qdnd.herokuapps.com). This version runs only on the QASM simulator so that the server is not overloaded. However if you want to run it on a actual quantum device, or just have a local copy of this follow the following step:
-
-1. Clone the git repository from [Github](https://github.com/quantum-kittens/dnd-character-generator).
-2. `cd` into the git repository.
-3. Execute `pip install -r requirements.txt`.
-4. Execute `export FLASK_APP = app.py`
-5. Execute `flask run`
-
-The app will available at `127.0.0.1:5000/`. You can direct your browser to that location to access it. To run this on an actual quantum device, open `app.py` and edit it as mentioned in the comments in the file, before executing `flask run`.
 
 ## Credits
 #### Created by:
