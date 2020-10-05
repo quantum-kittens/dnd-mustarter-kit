@@ -2,6 +2,8 @@
 
 {% block banner %}
 
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd_tavern-1.jpg" style="width:100%;" >
+
 {% endblock %}
 
 {% block navigation %}
@@ -22,18 +24,18 @@
 
 {% block title %}
 
-<div class="container">
-  <div class="row">
-    <h2 style="text-align: center">Ad-libbed D&amp;D Scene</h2>
-  </div>
-</div>
 
 {% endblock %}
 
 {% block content %}
 
 {% if answered %}
-
+</p>
+<div class="container">
+  <div class="row">
+    <h4 style="text-align: center">Stranger Things</h4>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="ten columns offset-by-one">
@@ -43,13 +45,19 @@
 </div>
 
 {% else %}
-
+</p>
+<div class="container">
+  <div class="row">
+    <h4 style="text-align: center">D&amp;D Scene</h4>
+  </div>
+</div>
 <!-- Form -->
 <div class="container">
-  <h4 class="centering">
-    <p> Fill in words according to the prompts. </p>
-    <p> NOTE: click TAB to move to next field, not ENTER </p>
-  </h4>
+  <h6 class="centering">
+    <p>This generates a complete ad-libbed scene.</p>
+    <p>Input words according to the prompts and hit 'Submit'.</p>
+    <p> NOTE: hit TAB to move to next field, not ENTER </p>
+  </h6>
   <form action="{{ url_for('scene') }}" method="post">
 
     {% for category in categories %}
@@ -73,4 +81,7 @@
 {% endblock %}
 
 {% block footer %}
+<hr>
+<h6 style="text-align: center;"><a href="https://www.deviantart.com/exitmothership/art/Dizzy-Hearts-Tavern-734479865">Artist: exitmothership on DeviantArt</a></h6>
+
 {% endblock %}

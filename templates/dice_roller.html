@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block banner %}
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd-dice.jpg" style="width:100%;" >
 
 {% endblock %}
 
@@ -21,10 +22,10 @@
 {% endblock %}
 
 {% block title %}
-
+</p>
 <div class="container">
   <div class="row">
-    <h2 style="text-align: center">Dice Roller</h2>
+    <h4 style="text-align: center">Dice Roller</h4>
   </div>
 </div>
 
@@ -34,11 +35,10 @@
 <!-- Form -->
 <div class="container">
 
-  <h5 class="centering">
-    <p>How to use:</p> 
-    <p> If you want to roll three d10's with a modifier of four, that is, 3d10 + 4, </p>
-    <p> select d10, number of dice = 3 and modifer = 4. Then click roll! </p>
-  </h5>
+  <h6 class="centering">
+    <p>To roll three d10's with a modifier of four, i.e., 3d10 + 4, select d10, number of dice = 3 and modifer = 4.</p>
+    <p>For d100: roll two d10’s, one for the tens digit and one for the ones digit. Eg.: 9 and 6 from two d10 rolls = 96.</p>
+  </h6>
 
   <form action="{{ url_for('dice') }}" method="post">
 
@@ -110,4 +110,7 @@
 {% endblock %}
 
 {% block footer %}
+<hr>
+<h6 style="text-align: center;"><a href="https://unsplash.com/@clintbustrillos">Photographer: clintbustrillos on Unsplash</a></h6>
+
 {% endblock %}

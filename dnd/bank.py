@@ -23,7 +23,7 @@ WORD_BANK = {
     "neg_adj": [
         "frivolous",
         "conceited",
-        "exasperating",
+        "frustrating",
         "dishonorable",
         "depraved",
         "fiendish",
@@ -35,7 +35,7 @@ WORD_BANK = {
         "cynical",
         "pompous",
         "frigid",
-        "offensive",
+        "nasty",
     ],
     # Appearance/smell adjectives
     "app_neg_adj": [
@@ -43,7 +43,7 @@ WORD_BANK = {
         "grimy",
         "sour",
         "putrid",
-        "emaciated",
+        "scraggy",
         "gaunt",
         "dour",
         "grotty",
@@ -69,11 +69,11 @@ WORD_BANK = {
     "colors": [
         "blue",
         "mauve",
-        "olive",
+        "beige",
         "burgundy",
         "white",
         "brown",
-        "orange",
+        "carrot orange",
         "yellow",
         "plum",
         "green",
@@ -235,7 +235,7 @@ WORD_BANK = {
 STORIES_DB = [
     "You ate a cursed USER_FRUIT and now you can't see the color QC_COLORS.",
     "A QC_NEG_ADJ picksie stole your USER_COLOR USER_OBJECT, and now you search high and low to recover it.",
-    "When you were an infant, a QC_RACES wizard bestowed upon you an amulet with a symbol of a QC_NEG_ADJ USER_ANIMAL.",
+    "When you were an infant, a QC_RACES wizard bestowed upon you an amulet with the symbol of a QC_NEG_ADJ USER_ANIMAL.",
     "You had a weird dream about a QC_COLORS USER_ANIMAL drinking USER_BEVERAGE, which you took as a sign to go on adventures.",
     "Your childhood was torn apart by a USER_ADJECTIVE QC_CONFLICTS.",
     "You were banished from QC_PLACES because you served USER_FOOD topped with QC_CONDIMENTS to QC_RACES_PLURAL.",
@@ -268,19 +268,19 @@ You make your way to the bar at the back, where the barkeep, a USER_ADJ5 QC_RACE
 
 “Give me a USER_DRINK. And USER_FOOD if you have any,” you say, easing your heavy pack onto the floor, settling on a barstool.
 
-The innkeeper raises an eyebrow before shrugging and calling out to the waitress who greeted you.
+The barkeep raises an eyebrow before shrugging and calling out to the waitress who greeted you.
 
-“Fetch that fresh bit o’ USER_DRINK from the back would ye, lass? And tell cook to get on some USER_FOOD.” The innkeeper turns to you, still polishing the same glass. “The name’s USER_ANOTHER_NAME. I would no object to hearing yours, but some like to keep low, ye ken. What’ll it be?”
+“Fetch that fresh bit o’ USER_DRINK from the back would ye, lass? And tell cook to get on some USER_FOOD.” The barkeep turns to you, still polishing the same glass. “The name’s USER_ANOTHER_NAME. I would no object to hearing yours, but some like to keep low, ye ken. What’ll it be?”
 
 You simply smile. Your recent campaign gave you a bit of a reputation and you’d like to enjoy your USER_DRINK in peace.
 
-USER_NAME grins with a quick nod, then turns away to polish a second glass.
+USER_ANOTHER_NAME grins with a quick nod, then turns away to polish a second glass.
 
 It is not long before you clasp your USER_DRINK, and they’ve even provided USER_FOOD, though it’s oddly topped with QC_CONDIMENTS. But you’ve eaten stranger things, and you dig in anyway.
 
 As you sip and snack, you scan the room, tuning in to the soft murmurs of the tavern crowd, the dusty paintings of USER_PLURAL_NOUN and QC_NOUNS_PLURAL on the walls, the smell of sweat and QC_SPICES riding on the air.
 
-You suppress a smile when the bard fumbles over some USER_INSTRUMENT notes.
+You suppress a smile when the bard fumbles some USER_INSTRUMENT notes.
 
 At once, you catch a whiff of USER_FLOWER, a scent that briefly tickles something in your memory; someone is next to you but as you turn to look, their hand blocks you.
 
@@ -294,13 +294,13 @@ The mysterious stranger slips something into your hands, pressing your fingers a
 
 Your fingers are tightly wrapped around a USER_COLOR USER_OBJECT. Baffled, you look up, but the stranger is gone.
 
-“Hey, USER_NAME, who was that?” you ask, turning to the barkeep.
+“Hey, USER_ANOTHER_NAME, who was that?” you ask, turning to the barkeep.
 
 “Hmm?”
 
 “That person who spoke to me. Right here.” You point.
 
-USER_NAME looks at you as though you’ve grown a second head. “There’s no one come to the bar since ye.”
+USER_ANOTHER_NAME looks at you as though you’ve grown a second head. “There’s no one come to the bar since ye.”
 
 You frown, look from the barkeep to the USER_OBJECT in your hand. And with a hint of a chuckle, you slip it into the deep pockets of your cloak.
 
@@ -316,7 +316,7 @@ Yes, you’ve certainly seen stranger things. And you will continue to do so, yo
 
 You push a handful of coins the barkeep’s way, strap on your pack, and head out the door.
 
-You whistle for USER_ANOTHER_NAME and you ride off into the night, the USER_COLOR USER_OBJECT tucked safely inside your pocket.
+You whistle for USER_NAME and you ride off into the night, the USER_COLOR USER_OBJECT tucked safely inside your pocket.
 
 The answers are out there somewhere.
 """
