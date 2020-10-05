@@ -1,6 +1,29 @@
 {% extends "layout.html" %}
 
-{% block body %}
+{% block banner %}
+
+{% endblock %}
+
+{% block navigation %}
+
+<div class="navbar-spacer"></div>
+<nav class="navbar">
+  <div class="container">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/dice">Dice Roller</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/character">Character Generator</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/scene">D&amp;D Scene</a></li>
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}
+
+{% block title %}
+{% endblock %}    
+    
+{% block content %}
 
 <div class="container">
   <h3 class="centering"><span>Overview</span></h3>
@@ -11,11 +34,17 @@
     <p> This generator is based on the D&amp;D 5E Player’s Handbook.</p>
   </h5>
   <hr>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="container">
   <h6 class="centering">
     For more information, please look at the <a href="https://www.deviantart.com/cyberaeon/art/Party-of-seven-678394450">README</a>
     or check out the Github<a href="https://www.deviantart.com/cyberaeon/art/Party-of-seven-678394450">repo</a>.
   </h6>
-</div>
-
+ </div>
 
 {% endblock %}

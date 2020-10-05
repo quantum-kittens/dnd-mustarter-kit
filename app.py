@@ -125,7 +125,7 @@ def scene():
     scene = " ".join(["<p>" + line + "</p>" for line in lines])
     categories = [
         "an animal",
-        "a singular noun",
+        "a noun (singular)",
         "an adjective describing appearance or smell",
         "a name",
         "an instrument",
@@ -133,7 +133,7 @@ def scene():
         "a drink",
         "a food",
         "another name",
-        "a plural noun",
+        "a noun (plural)",
         "a flower",
         "a color",
         "an object",

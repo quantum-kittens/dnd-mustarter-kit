@@ -1,12 +1,37 @@
 {% extends "layout.html" %}
 
-{% block body %}
+{% block banner %}
+
+{% endblock %}
+
+{% block navigation %}
+
+<div class="navbar-spacer"></div>
+<nav class="navbar">
+  <div class="container">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/dice">Dice Roller</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/character">Character Generator</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/scene">D&amp;D Scene</a></li>
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}
+
+{% block title %}
 
 <div class="container">
   <div class="row">
-    <h2 class="centering">Character Generator</h2>    
+    <h2 class="centering">Character Generator</h2>
+    <h5 style="text-align: center;" > This generates a name, race, class, and an ad-libbed backstory.</h5>
   </div>
 </div>
+
+{% endblock %}
+
+{% block content %}
 
 {% if answered %}
 
@@ -83,4 +108,7 @@
 
 {% endif %}
 
+{% endblock %}
+
+{% block footer %}
 {% endblock %}

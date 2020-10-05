@@ -122,21 +122,26 @@
     <!-- Iconify -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
+    <div class="container">
+        <h1 class="centering">D&amp;D μStarter Kit</h1>
+        <h5 class="centering"> powered by quantum computing and ad-libs</h5>
+    </div>
+    
   </head>
   <body>
-    {% block body %}
+    {% block banner %}
+    {% endblock %}
+    
+    {% block navigation %}
     {% endblock %}
 
-    <div class="navbar-spacer"></div>
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/dice">Dice Roller</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/character">Character Generator</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/scene">Scene Generator</a></li>
-        </ul>
-      </div>
-    </nav>
+    {% block title %}
+    {% endblock %}
+    
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
   </body>
 </html>
