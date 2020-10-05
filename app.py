@@ -2,8 +2,30 @@ import re
 from collections import defaultdict, deque
 
 from flask import Flask, Markup, render_template, request
+from qiskit import IBMQ, BasicAer
+from qiskit.providers.ibmq import least_busy
 
 from dnd import *
+
+###############################################################################
+# To run this on an actual quantum device, uncomment the following lines, and
+# comment out `backend = BasicAer.get_backend("qasm_simulator")`. Then
+# uncomment the lines in the `get class` section of the character generator
+# as described further down.
+###############################################################################
+
+# IBMQ.save_account("ibmq-token-goes-here")
+# provider = IBMQ.load_account()
+# backend = least_busy(
+#     provider.backends(
+#         filters=lambda x: x.configuration().n_qubits >= 5
+#         and not x.configuration().simulator
+#         and x.status().operational == True
+#     )
+# )
+
+backend = BasicAer.get_backend("qasm_simulator")
+
 
 app = Flask(__name__)
 
@@ -67,13 +89,24 @@ def character():
 
         # get name
         syllables = d4.roll(1, 0)[0][0]
-        name = ng.generate(syllables)
+        name = ng.generate(syllables, backend=backend)
 
         # get race
-        idx = rg.generate()[0]
+        idx = rg.generate(backend=backend)[0]
         race = RACES[idx]
 
         # get class
+
+        #######################################################################
+        # To run this on a actual device, uncomment the following lines, and
+        # comment out `thetas = optimized_params[idx]` and
+        # `dnd_class = ClassGenerator.generate(race, thetas)[0]`
+        #######################################################################
+
+        # cg = ClassGenerator(race, backend=backend)
+        # cg.optimize(maxiter=500)
+        # dnd_class = ClassGenerator.generate(race, cg.get_minima())[0]
+
         thetas = optimized_params[idx]
         dnd_class = ClassGenerator.generate(race, thetas)[0]
 
@@ -96,17 +129,17 @@ def dice():
 
         roll = None
         if dice == "D20":
-            roll = d20.roll(times, modifier)
+            roll = d20.roll(times, modifier, backend=backend)
         elif dice == "D4":
-            roll = d4.roll(times, modifier)
+            roll = d4.roll(times, modifier, backend=backend)
         elif dice == "D6":
-            roll = d6.roll(times, modifier)
+            roll = d6.roll(times, modifier, backend=backend)
         elif dice == "D8":
-            roll = d8.roll(times, modifier)
+            roll = d8.roll(times, modifier, backend=backend)
         elif dice == "D10":
-            roll = d10.roll(times, modifier)
+            roll = d10.roll(times, modifier, backend=backend)
         elif dice == "D12":
-            roll = d12.roll(times, modifier)
+            roll = d12.roll(times, modifier, backend=backend)
         else:
             return render_template("dice_roller.html")
 
@@ -168,7 +201,7 @@ def scene():
         for qc_category in qc.findall(scene):
             category = qc_category.partition("_")[2].lower()
             word_chooser = QuantumRandomInt(0, len(WORD_BANK[category]) - 1)
-            idx = word_chooser.generate()[0]
+            idx = word_chooser.generate(backend=backend)[0]
             if len(WORD_BANK[category]) > 1:
                 while idx == category_idx[category]:
                     idx = word_chooser.generate()[0]
