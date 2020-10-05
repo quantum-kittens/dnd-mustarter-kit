@@ -50,10 +50,10 @@ The class options per the D&D 5E Player’s Handbook are: barbarian, bard, cleri
 ###  Name Generation
 Names are generated in four stages of randomness:
 
-The number of syllables, 1 to 4 is randomly selected
-The letter type for a single syllable is randomly selected (consonant or vowel) 
-The number of letters for single type is randomly selected (1 or 2)
-The letters are randomly selected.
+- The number of syllables, 1 to 4 is randomly selected
+- The letter type for a single syllable is randomly selected (consonant or vowel) 
+- The number of letters for single type is randomly selected (1 or 2)
+- The letters are randomly selected.
 
 Letters have equal probability of being chosen. However, if two consonants are selected to appear one after the other, how synergetic they are together is taken into account.
 
