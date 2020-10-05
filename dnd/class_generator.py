@@ -3,6 +3,8 @@ from qiskit import BasicAer, QuantumCircuit, execute
 from qiskit.aqua.components.optimizers import SPSA
 from qiskit.circuit import ParameterVector
 
+from .qrandom import QuantumRandomInt
+
 # Ratings
 d = 1.1
 c = 1.2
@@ -98,6 +100,9 @@ class ClassGenerator:
             self.circuit.ry(next(thetas_iter), q)
         self.circuit.measure_all()
 
+        self.minima = []
+        self.qri = QuantumRandomInt(0, 31)
+
     def _measure(self, thetas):
         bound_circuit = self.circuit.bind_parameters({self.params: thetas})
         jobs = execute(bound_circuit, backend=self.backend, shots=self.shots)
@@ -112,15 +117,22 @@ class ClassGenerator:
         cost = np.sum(np.square(probabilities - self.expected_probabilities))
         return cost
 
-    def generate(self, maxiter=500):
-        rng = np.random.default_rng()
-        thetas = rng.uniform(0, 2 * np.pi, self.num_qubits)
+    def optimize(self, maxiter=500):
+        thetas = np.array(self.qri.generate(self.num_qubits)) / 32
 
         spsa = SPSA(maxiter=maxiter)
         minima, _, _ = spsa.optimize(
             self.num_qubits, self._objective_fn, initial_point=thetas
         )
 
-        counts = self._measure(minima)
+        self.minima = list(minima)
+
+    def get_minima(self):
+        return self.minima
+
+    @classmethod
+    def generate(cls, race, thetas, backend=None, shots=4096):
+        cg = cls(race, backend, shots)
+        counts = cg._measure(np.array(thetas))
         classes = [CLASSES[int(i, 2)] for i in reversed(sorted(counts, key=counts.get))]
         return classes

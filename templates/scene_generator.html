@@ -3,7 +3,9 @@
 {% block body %}
 
 <div class="container">
-  <h2>Scene Generator</h2>
+  <div class="row">
+    <h2 style="text-align: center">Scene Generator</h2>
+  </div>
 </div>
 
 {% if answered %}
@@ -24,13 +26,17 @@
 
     {% for category in categories %}
     <div class="row">
-      <div class="six columns">
+      <div class="eight columns offset-by-two">
         <label for="{{ category }}">Enter {{ category }}</label>
         <input class="u-full-width" type="text" name="{{ category }}">
       </div>
     </div>
     {% endfor %}
-    <input class="button-primary" type="submit" value="Submit" id="roll_btn" />
+    <div class="row">
+      <div class="eight columns offset-by-five">
+        <input class="button-primary" type="submit" value="Submit" id="roll_btn">
+      </div>
+    </div>
 
 </div>
 
