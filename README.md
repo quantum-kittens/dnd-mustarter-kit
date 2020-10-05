@@ -16,7 +16,7 @@ This is a helper tool for players of Dungeons and Dragons. Roll dice, generate a
 **Access the D&D μStarter Kit online by clicking here.**
 
 
-<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/home.png" width="70%"  />
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/home.png" width="80%"  />
 
 Click on ‘Dice Roller’ to use the dice. You will be taken to a screen that allows you to select the type of dice, number of dice, and modifier. Click ‘Roll’ to get your result.
 
