@@ -157,7 +157,7 @@ def scene():
         for user_category in user_categories:
             reply = user_replies.popleft()
             category = user_category.partition("_")[2].lower()
-            if category == "name" or "animal" or "noun":
+            if category in {"name", "animal", "noun"}:
                 word = reply.capitalize()
             else:
                 word = reply.lower()

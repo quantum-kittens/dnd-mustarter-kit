@@ -3,44 +3,46 @@
 {% block body %}
 
 <div class="container">
-  <h2>Character Generator</h2>
+  <div class="row">
+    <h2 class="centering">Character Generator</h2>    
+  </div>
 </div>
 
 {% if answered %}
 
-<div class="container">
+<div class="container centering">
   <div class="row">
-    <div class="one column">
+    <div class="eight columns offset-by-two">
       <label for="name">Name</label>
     </div>
   </div>
   <div class="row">
-    <div class="six columns">
+    <div class="eight columns offset-by-two">
       <h4> {{ name }} </h4>
     </div>
   </div>
   <div class="row">
-    <div class="one column">
+    <div class="eight columns offset-by-two">
       <label for="race">Race</label>
     </div>
   </div>
   <div class="row">
-    <div class="six columns">
+    <div class="eight columns offset-by-two">
       <h4> {{ race }} </h4>
     </div>
   </div>
   <div class="row">
-    <div class="one column">
+    <div class="eight columns offset-by-two">
       <label for="name">Class</label>
     </div>
   </div>
   <div class="row">
-    <div class="six columns">
+    <div class="eight columns offset-by-two">
       <h4> {{ dnd_class }} </h4>
     </div>
   </div>
   <div class="row">
-    <div class="one column">
+    <div class="eight columns offset-by-two">
       <label for="name">Backstory</label>
     </div>
   </div>
@@ -50,7 +52,7 @@
     </div>
   </div>
 
-  <!-- <a class="button-primary" href="{{ url_for('character') }}">REFRESH</a> -->
+  <a class="button button-primary" href="{{ url_for('character') }}">REFRESH</a>
   
 </div>
 
@@ -64,7 +66,7 @@
 
     {% for category in categories %}
     <div class="row">
-      <div class="six columns">
+      <div class="eight columns offset-by-two">
         {% if category == "adjective" %}
         <label for="{{ category }}">Enter an {{ category }}</label>
         {% else %}
@@ -74,8 +76,9 @@
       </div>
     </div>
     {% endfor %}
-    <input class="button-primary" type="submit" value="Submit" id="roll_btn" />
-
+    <div class="eight columns offset-by-two centering">
+      <input class="button-primary" type="submit" value="Submit" id="roll_btn" />
+    </div>
 </div>
 
 {% endif %}
