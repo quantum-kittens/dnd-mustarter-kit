@@ -109,10 +109,10 @@ for insightful comments, remarks and advice.
 - [D&D Wiki](https://www.dandwiki.com/)
 - [Synergy Table by Taron Pounds](https://www.reddit.com/r/DnD/comments/8788on/5e_race_class_synergy_analysis_v5/)
 
-#### Other Resources:
-
-- [The Quantum Catalog](http://quantumcatalog.com/)
+#### Quantum Resources:
 - [Qiskit](https://qiskit.org/)
+- [The Quantum Catalog](http://quantumcatalog.com/)
+
 
 
 Cover photo by [Clint Bustrillos on Unsplash](https://unsplash.com/@clintbustrillos).
