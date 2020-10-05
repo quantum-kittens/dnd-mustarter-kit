@@ -70,25 +70,25 @@ Ad-libs
 
 The ad-libbed aspect of the backstories and the D&D scene is a joint effort by the user and the quantum computer. The improvised words are generated both by user inputs as well as randomly selected by a quantum computer from word banks. User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.
 
-### Credits
-##### Created by:
+## Credits
+#### Created by:
 - Radha Pyari Sandhir (Github: [quantum-kittens](https://github.com/quantum-kittens), Twitter: [RadhaPyari](https://twitter.com/RadhaPyari))
 - Soham Pal (Github: [e-eight](https://github.com/e-eight), Twitter: [dragonbornmonk](https://twitter.com/dragonbornmonk))
 
-##### Special thanks to:
+#### Special thanks to:
 
 - Emily (creator of [fantasynamegenerators.com](https://www.fantasynamegenerators.com/))
 - Protim Bhaumik (professional DM)
 
 for insightful comments, remarks and advice.
 
-##### D&D Resource Links:
+#### D&D Resource Links:
 
 D&D Beyond 
 D&D Wiki 
 Synergy Table by Taron Pounds
 
-##### Other Resources: 
+#### Other Resources: 
 [The Quantum Catalog](http://quantumcatalog.com/)
 [Qiskit](https://qiskit.org/)
 
