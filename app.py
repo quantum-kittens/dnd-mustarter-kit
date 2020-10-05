@@ -152,12 +152,16 @@ def scene():
                 user_categories.append(user_category)
         user_replies = deque([request.form.get(category) for category in categories])
 
+        print(categories)
+        print(user_categories)
+
         print(len(user_categories) == len(user_replies))
 
         for user_category in user_categories:
             reply = user_replies.popleft()
             category = user_category.partition("_")[2].lower()
-            if category in {"name", "animal", "noun"}:
+            capitalized = {"name", "another_name", "animal", "noun"}
+            if category in capitalized:
                 word = reply.capitalize()
             else:
                 word = reply.lower()
