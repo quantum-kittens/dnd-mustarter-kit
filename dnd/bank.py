@@ -238,7 +238,7 @@ STORIES_DB = [
     "When you were an infant, a QC_RACES wizard bestowed upon you an amulet with the symbol of a QC_NEG_ADJ USER_ANIMAL.",
     "You had a weird dream about a QC_COLORS USER_ANIMAL drinking USER_BEVERAGE, which you took as a sign to go on adventures.",
     "Your childhood was torn apart by a USER_ADJECTIVE QC_CONFLICTS.",
-    "You were banished from QC_PLACES because you served USER_FOOD topped with QC_CONDIMENTS to QC_RACES_PLURAL.",
+    "You were banished from a QC_PLACES because you served USER_FOOD topped with QC_CONDIMENTS to QC_RACES_PLURAL.",
     "You are from a QC_PLACES that perished in a USER_NATURAL_DISASTER that you suspect wasn’t natural.",
     "Your family was killed by a group of QC_RACES warriors, and now you’ve sworn to USER_VERB with any you see.",
     "You once ate a delicious USER_FOOD in a distant QC_PLACES and now you can’t stop craving it--you must find it again!",
