@@ -78,7 +78,7 @@ Names are generated in four stages of randomness:
 Letters have equal probability of being chosen. However, if two consonants are selected to appear one after the other, how synergetic they are together is taken into account.
 
 For instance, if the letter type is ‘consonant’, and the number of letters is 2, then “Sb” would not work, but “St” would.
-The names follow the pattern consonant (c) -> vowel (v) -> c -> v -> c (or vice versa). Each stage adds either 1 or 2 letters--this is also randomly chosen.
+The names follow the pattern consonant (c) → vowel (v) → c → v → c (or vice versa). Each stage adds either 1 or 2 letters--this is also randomly chosen.
 
 ### Rolling Dice
 There are 6 dice available: d4, d6, d8, d10, d12, d20. For dN, a number between 1 and N is randomly selected through a measurement on a quantum circuit as described above. The number of qubits selected is such that the number of possible states is greater than or equal to N, since for n qubits there are 2<sup>n</sup> possible states. If the number of states is larger, the rice keeps ‘rolling’ until a number less than N+1 is obtained. In this way all numbers are still equally likely to be picked.
