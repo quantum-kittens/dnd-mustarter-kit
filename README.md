@@ -65,7 +65,7 @@ We make use of this synergy table by Taron Pounds as a basis for a simple probab
 
 The SPSA optimizer from Qiskit Aqua aides in the selection of the final class. However, the probabilities have been initialized such that there is a non-zero (though very small) chance of a less synergetic class being chosen. We don’t want to eliminate class possibilities altogether! For the online version we have pre-computed the optimal parameters using SPSA, so as to not load the server.
 
-The class options per the D&D 5E Player’s Handbook are: barbarian, bard, cleric, druid, fighter (dex), fighter (str)", fighter (Eldritch knight), monk, paladin, ranger (dex), ranger (str), rogue, rogue (arcane trickster), sorcerer, warlock, and wizard.
+The class options per the D&D 5E Player’s Handbook are: barbarian, bard, cleric, druid, fighter (dex), fighter (str), fighter (eldritch knight), monk, paladin, ranger (dex), ranger (str), rogue, rogue (arcane trickster), sorcerer, warlock, and wizard.
 
 ### Name Generation
 Names are generated in four stages of randomness:
