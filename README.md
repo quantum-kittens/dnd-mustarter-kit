@@ -81,9 +81,9 @@ For instance, if the letter type is ‘consonant’, and the number of letters i
 The names follow the pattern consonant (c) -> vowel (v) -> c -> v -> c (or vice versa). Each stage adds either 1 or 2 letters--this is also randomly chosen.
 
 ### Rolling Dice
-There are 6 dice available: d4, d6, d8, d10, d12, d20. For dN, a number between 1 and N is randomly selected through a measurement on a quantum circuit as described above. The number of qubits selected is such that the number of possible states is greater than or equal to N, since for n qubits there are 2^n possible states. If the number of states is larger, the rice keeps ‘rolling’ until a number less than N+1 is obtained. In this way all numbers are still equally likely to be picked.
+There are 6 dice available: d4, d6, d8, d10, d12, d20. For dN, a number between 1 and N is randomly selected through a measurement on a quantum circuit as described above. The number of qubits selected is such that the number of possible states is greater than or equal to N, since for n qubits there are 2<sup>n</sup> possible states. If the number of states is larger, the rice keeps ‘rolling’ until a number less than N+1 is obtained. In this way all numbers are still equally likely to be picked.
 
-Example: for d10 the number of qubits is 4. There are 2^4, that is, 16 possible states. However, since we only need 10, the dice is rolled until the outcome is between 1 and 10.
+Example: for d10 the number of qubits is 4. There are 2<sup>4</sup>, that is, 16 possible states. However, since we only need 10, the dice is rolled until the outcome is between 1 and 10.
 
 If you want to roll a d100, we recommend you roll two d10’s, one for the tens digit and one for the ones digit. For instance, if you obtain 9 and 6 from two d10 rolls, then your outcome is 96, and if you get 10 and 10 on both the rolls, then your outcome is 100.
 
