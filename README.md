@@ -49,7 +49,7 @@ Quantum computing is used anywhere randomness is required. For instance, the dic
 
 A similar method is applied during the random selection of letters for the name generator, the backstory from the story bank, and the words selected for the quantum computers contribution to the ad-libbed parts.
 
-For instance, if a choice needs to be made from among eight word options, then a circuit of three qubits is prepared. A Hadamard is applied on each qubit, placing them in a superposition of all eight possible states from <img src="https://render.githubusercontent.com/render/math?math=|000⟩"> to <img src="https://render.githubusercontent.com/render/math?math=|001⟩"> and so on to <img src="https://render.githubusercontent.com/render/math?math=|111⟩">. Upon measurement, one of the eight states is obtained, which corresponds to one of the eight word options.
+For instance, if a choice needs to be made from among eight word options, then a circuit of three qubits is prepared. A Hadamard is applied on each qubit, placing them in a superposition of all eight possible states from <img src="https://render.githubusercontent.com/render/math?math=|000\rangle"> to <img src="https://render.githubusercontent.com/render/math?math=|001\rangle"> and so on to <img src="https://render.githubusercontent.com/render/math?math=|111\rangle">. Upon measurement, one of the eight states is obtained, which corresponds to one of the eight word options. |1⟩
 
 All circuits are simulated with the QASM simulator from IBM’s open source SDK, Qiskit. However if you would rather user IBM's quantum devices then you can do so, as discussed later.
 
