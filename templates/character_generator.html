@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block banner %}
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd_chars_2.jpg" style="width:100%;" >
+<h6 class="centering">Left to right: tiefling, dragonborn, dwarf, dark elf, half-orc.</h6>
+
+{% endblock %}
+
+{% block title %}
+</p>
+<div class="container">
+  <div class="row">
+    <h4 class="centering">Character Generator</h4>
+    <h6 class="centering">
+      <p>This generates a name, race, class, and an ad-libbed backstory.</p>
+      <p>Input words according to the prompts and hit 'Submit'.</p>
+      <p>User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.</p>
+    </h6>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+{% if answered %}
+
+<div class="container centering">
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <label for="name">Name</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <h4> {{ name }} </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <label for="race">Race</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <h4> {{ race }} </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <label for="name">Class</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <h4> {{ dnd_class }} </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <label for="name">Backstory</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="sixteen columns">
+      <h4> {{ backstory }} </h4>
+    </div>
+  </div>
+
+  <a class="button button-primary" href="{{ url_for('character') }}">REFRESH</a>
+  
+</div>
+
+
+
+{% else %}
+
+<!-- Form -->
+<div class="container">
+  <form action="{{ url_for('character') }}" method="post">
+
+    {% for category in categories %}
+    <div class="row">
+      <div class="eight columns offset-by-two">
+        {% if category == "adjective" %}
+        <label for="{{ category }}">Enter an {{ category }}</label>
+        {% else %}
+        <label for="{{ category }}">Enter a {{ category }}</label>
+        {% endif %}
+        <input class="u-full-width" type="text" name="{{ category }}">
+      </div>
+    </div>
+    {% endfor %}
+    <div class="eight columns offset-by-two centering">
+      <input class="button-primary" type="submit" value="Submit" id="roll_btn" />
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+<hr>
+<h6 class="centering">
+  <p>
+    Race options: dragonborn, hill dwarf, mountain dwarf, dark elf, high elf, wood elf, deep gnome, forest gnome, rock gnome, half-elf, lightfoot halfling, stout halfling, half-orc, variant human, human, tiefling.
+  </p>
+  <p>
+    Class options: barbarian, bard, cleric, druid, fighter (dex), fighter (str), fighter (eldritch knight), monk, paladin, ranger (dex), ranger (str), rogue, rogue (arcane trickster), sorcerer, warlock, and wizard.
+  <p>
+</h6>
+<hr>
+<h6 class="centering">
+  <a href="https://www.deviantart.com/macarious/art/tiefling-811320247">Tiefling by macarious on DeviantArt</a>, 
+  <a href="https://www.deviantart.com/kazorkthedork/art/DnD-Dragonborn-514762081">Dragonborn by kazorkthedork on DeviantArt</a>,
+  <a href="https://www.deviantart.com/artofbeng/art/Blunderbuss-190344473">Dwarf by artofbeng on DeviantArt</a>,
+  <a href="https://www.deviantart.com/dopaprime/art/Drow-Ranger-774589624">Dark elf by dopaprim on DeviantArt</a>,
+  <a href="https://www.deviantart.com/jeleynai/art/Half-Orc-Barbarian-Portrait-809549324">Half-orc by jeleynai on DeviantArt</a>
+</h6>
+
+{% endblock %}

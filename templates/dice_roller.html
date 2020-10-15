@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block banner %}
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd-dice.jpg" style="width:100%;" >
+
+{% endblock %}
+
+{% block title %}
+</p>
+<div class="container">
+  <div class="row">
+    <h4 class="centering">Dice Roller</h4>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<!-- Form -->
+<div class="container">
+
+  <h6 class="centering">
+    <p>To roll three d10's with a modifier of four, i.e., 3d10 + 4, select d10, number of dice = 3 and modifer = 4.</p>
+    <p>For d100: roll two d10’s, one for the tens digit and one for the ones digit. Eg.: 9 and 6 from two d10 rolls = 96.</p>
+  </h6>
+
+  <form action="{{ url_for('dice') }}" method="post">
+
+    <div class="row">
+      <div class="two columns">
+        <label for="D4">
+          <input type="radio" name="dice" id="D4" value="D4">
+          <span class="iconify" data-icon="mdi:dice-d4" data-inline="true" width="64px"></span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D6">
+          <input type="radio" name="dice" id="D6" value="D6">
+          <span class="iconify" data-icon="mdi:dice-d6" data-inline="true" width="64px"></span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D8">
+          <input type="radio" name="dice" id="D8" value="D8">
+          <span class="iconify" data-icon="mdi:dice-d8" data-inline="true" width="64px"></span>
+        </label>
+      </div>
+      
+      <div class="two columns">
+        <label for="D10">
+          <input type="radio" name="dice" id="D10" value="D10">
+          <span class="iconify" data-icon="mdi:dice-d10" data-inline="true" width="64px"></span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D12">
+          <input type="radio" name="dice" id="D12" value="D12">
+          <span class="iconify" data-icon="mdi:dice-d12" data-inline="true" width="64px"></span>
+        </label>
+      </div>
+
+      <div class="two columns">
+        <label for="D20">
+          <input type="radio" name="dice" id="D20" value="D20" checked="checked">
+          <span class="iconify" data-icon="mdi:dice-d20" data-inline="true" width="64px"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six columns">
+        <label for="Number of Dice">Number of Dice</label>
+        <input type="number" value=1 class="u-full-width" name="times"/>
+      </div>
+      <div class="six columns">
+        <label for="Modifier">Modifier</label>
+        <input type="number" value=0 class="u-full-width" name="modifier"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="eight columns offset-by-two centering">
+        <input class="button-primary" type="submit" value="Roll" id="roll_btn" />
+      </div>
+    </div>
+    <br/>
+    <div class="row centering alert alert-info">
+      <strong>{{ roll }}</strong>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+<hr>
+<h6 class="centering"><a href="https://unsplash.com/@clintbustrillos">Photographer: clintbustrillos on Unsplash</a></h6>
+
+{% endblock %}

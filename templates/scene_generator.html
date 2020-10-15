@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block banner %}
+
+<img src="https://www.radhapyarisandhir.com/wp-content/uploads/2020/10/dnd_tavern-1.jpg" style="width:100%;" >
+
+{% endblock %}
+
+{% block title %}
+
+
+{% endblock %}
+
+{% block content %}
+
+{% if answered %}
+</p>
+<h6 class="centering"><p>User selected words are highlighted in orange, and quantum computer selected words are highlighted in blue.</p></h6>
+<hr>
+<div class="container">
+  <div class="row">
+    <h4 class="centering">Stranger Things</h4>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="ten columns offset-by-one">
+      {{ scene }}
+    </div>
+  </div>
+</div>
+
+{% else %}
+</p>
+<div class="container">
+  <div class="row">
+    <h4 class="centering">D&amp;D Scene</h4>
+  </div>
+</div>
+<!-- Form -->
+<div class="container">
+  <h6 class="centering">
+    <p>This generates a complete ad-libbed scene.</p>
+    <p>Input words according to the prompts and hit 'Submit'.</p>
+    <p> NOTE: hit TAB to move to next field, not ENTER </p>
+  </h6>
+  <form action="{{ url_for('scene') }}" method="post">
+
+    {% for category in categories %}
+    <div class="row">
+      <div class="eight columns offset-by-two">
+        <label for="{{ category }}">Enter {{ category }}</label>
+        <input class="u-full-width" type="text" name="{{ category }}">
+      </div>
+    </div>
+    {% endfor %}
+    <div class="row">
+      <div class="eight columns offset-by-five">
+        <input class="button-primary" type="submit" value="Submit" id="roll_btn">
+      </div>
+    </div>
+
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+<hr>
+<h6 class="centering"><a href="https://www.deviantart.com/exitmothership/art/Dizzy-Hearts-Tavern-734479865">Artist: exitmothership on DeviantArt</a></h6>
+
+{% endblock %}
