@@ -32,12 +32,45 @@ LETTER_SYNERGY_DICT = {
 
 CONS_OR_VOW = "cv"
 
+# dwarf clan names (clan name = first part + second part)
+CLAN_FIRST = ["iron", 
+              "steel",
+              "fist", 
+              "willow",
+              "stone", 
+              "giants",
+              "amber", 
+              "thorn",
+              "birch", 
+              "ashen", 
+              "frost", 
+              "battle", 
+              "crag", 
+              "elder",
+              "oaken",
+              "gold"]
+
+CLAN_SECOND = ["beard", 
+               "fist", 
+               "thorn", 
+               "forge", 
+               "hammer", 
+               "helm",
+               "shield",
+               "stone",
+               "bane"]
+
 
 class NameGenerator:
-    def __init__(self):
+    def __init__(self, nametype): #nametype can be 'name' or 'clan'
         self.coin = QuantumRandomInt(0, 1)
-        self.vowel_chooser = QuantumRandomInt(0, len(VOWELS) - 1)
-        self.consonant_chooser = QuantumRandomInt(0, len(CONSONANTS) - 1)
+        self.nametype = nametype
+        if self.nametype == "name":
+            self.vowel_chooser = QuantumRandomInt(0, len(VOWELS) - 1)
+            self.consonant_chooser = QuantumRandomInt(0, len(CONSONANTS) - 1)
+        else:
+            self.first_chooser = QuantumRandomInt(0, len(CLAN_FIRST) - 1)
+            self.second_chooser = QuantumRandomInt(0, len(CLAN_SECOND) - 1)
 
     def generate(self, syllables, **kwargs):
         name = ""
@@ -93,3 +126,17 @@ class NameGenerator:
     def _get_vowel(self, **kwargs):
         idx = self.vowel_chooser.generate(1, **kwargs)[0]
         return VOWELS[idx]
+    
+    def generate_clan(self,**kwargs):
+            idxf = self.first_chooser.generate(1, **kwargs)[0]
+            idxs = self.second_chooser.generate(1, **kwargs)[0]
+            first = CLAN_FIRST[idxf]
+            second = CLAN_SECOND[idxs]
+
+            while second == first:
+                idxs = self.second_chooser.generate(1, **kwargs)[0]
+                second = CLAN_SECOND[idxs]
+    
+            clan = first + second
+            return clan.capitalize()
+

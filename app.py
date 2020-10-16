@@ -38,7 +38,7 @@ d12 = QuantumDice(12)
 d20 = QuantumDice(20)
 
 # Name Generator
-ng = NameGenerator()
+ng = NameGenerator
 
 # Race Generator
 rg = QuantumRandomInt(0, len(RACES) - 1)
@@ -89,11 +89,19 @@ def character():
 
         # get name
         syllables = d4.roll(1, 0)[0][0]
-        name = ng.generate(syllables, backend=backend)
+        name = ng("name").generate(syllables, backend=backend)
 
         # get race
         idx = rg.generate(backend=backend)[0]
         race = RACES[idx]
+
+        #### get clan name if dwarf
+        clan_name = "NULL"
+        
+        if race == "Hill Dwarf" or "Mountain Dwarf":
+            
+            clan_name = ng("clan").generate_clan()
+            #clan_name = generate_clan()
 
         # get class
 
@@ -114,6 +122,7 @@ def character():
             "character_generator.html",
             name=name,
             race=race,
+            clan_name = clan_name,
             dnd_class=dnd_class,
             backstory=Markup(story),
             answered=True,
