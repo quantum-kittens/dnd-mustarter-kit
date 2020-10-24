@@ -36,6 +36,7 @@
       <h4> {{ name }} </h4>
     </div>
   </div>
+
   <div class="row">
     <div class="eight columns offset-by-two">
       <label for="race">Race</label>
@@ -46,6 +47,18 @@
       <h4> {{ race }} </h4>
     </div>
   </div>
+  {% if race == "Hill Dwarf" or race == "Mountain Dwarf" %}
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <label for="race">of Clan</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="eight columns offset-by-two">
+      <h4> {{ clan_name }} </h4>
+    </div>
+  </div>
+  {% endif %}
   <div class="row">
     <div class="eight columns offset-by-two">
       <label for="name">Class</label>
