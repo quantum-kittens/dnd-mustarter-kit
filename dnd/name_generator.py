@@ -48,6 +48,8 @@ CLAN_FIRST = ["iron",
               "crag", 
               "elder",
               "oaken",
+              "axe",
+              "sky",
               "gold"]
 
 CLAN_SECOND = ["beard", 
@@ -58,6 +60,8 @@ CLAN_SECOND = ["beard",
                "helm",
                "shield",
                "stone",
+               "peak",
+               "born",
                "bane"]
 
 
