@@ -24,7 +24,7 @@ If you want to run it on a actual quantum device, or just have a local copy of t
 1. Clone the git repository from [Github](https://github.com/quantum-kittens/dnd-mustarter-kit).
 2. `cd` into the git repository.
 3. Execute `pip install -r requirements.txt`.
-4. Execute `export FLASK_APP = app.py`
+4. Execute `export FLASK_APP=app.py`
 5. Execute `flask run`
 
 The app will available at `127.0.0.1:5000/`. You can direct your browser to that location to access it. To run this on an actual quantum device, open `app.py` and edit it as mentioned in the comments in the file, before executing `flask run`.
